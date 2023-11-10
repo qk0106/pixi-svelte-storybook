@@ -1,0 +1,14 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+
+#storybook
+build-storybook.log
+storybook-static
+
+#svelte
+.svelte-kit
+.turbo
+dist
+.DS_Store
