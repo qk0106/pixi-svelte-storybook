@@ -1,4 +1,4 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
 
 settings:
   autoInstallPeers: true
@@ -208,7 +208,7 @@ dependencies:
     version: 4.0.4(@pixi/assets@7.3.2)(@pixi/core@7.3.2)(@pixi/display@7.3.2)(@pixi/graphics@7.3.2)(@pixi/mesh-extras@7.3.2)(@pixi/mesh@7.3.2)(@pixi/sprite@7.3.2)
   pixi-svelte:
     specifier: latest
-    version: 0.0.6(@pixi-spine/loader-base@4.0.4)(@pixi-spine/runtime-3.7@4.0.3)(@pixi-spine/runtime-3.8@4.0.3)(@storybook/theming@7.5.3)(@sveltejs/vite-plugin-svelte@2.4.6)(postcss@8.4.31)(react-dom@18.2.0)(react@18.2.0)(rollup@2.79.1)(webpack@5.89.0)
+    version: 0.0.9(@pixi-spine/loader-base@4.0.4)(@pixi-spine/runtime-3.7@4.0.3)(@pixi-spine/runtime-3.8@4.0.3)(@storybook/theming@7.5.3)(@sveltejs/vite-plugin-svelte@2.4.6)(postcss@8.4.31)(react-dom@18.2.0)(react@18.2.0)(rollup@2.79.1)(webpack@5.89.0)
   pixi.js:
     specifier: ^7.2.4
     version: 7.3.2(@pixi/utils@7.3.2)
@@ -7937,8 +7937,8 @@ packages:
       '@pixi/sprite': 7.3.2(@pixi/core@7.3.2)(@pixi/display@7.3.2)
     dev: false
 
-  /pixi-svelte@0.0.6(@pixi-spine/loader-base@4.0.4)(@pixi-spine/runtime-3.7@4.0.3)(@pixi-spine/runtime-3.8@4.0.3)(@storybook/theming@7.5.3)(@sveltejs/vite-plugin-svelte@2.4.6)(postcss@8.4.31)(react-dom@18.2.0)(react@18.2.0)(rollup@2.79.1)(webpack@5.89.0):
-    resolution: {integrity: sha512-qmfJZO+/1FSy56kO9QY3/FQjcVZEQT1Hk6hQoWXnwbkfVrV144GgRd3IPYiYMcJ+Q+uAXRdgDuknHK4K8MegHQ==}
+  /pixi-svelte@0.0.9(@pixi-spine/loader-base@4.0.4)(@pixi-spine/runtime-3.7@4.0.3)(@pixi-spine/runtime-3.8@4.0.3)(@storybook/theming@7.5.3)(@sveltejs/vite-plugin-svelte@2.4.6)(postcss@8.4.31)(react-dom@18.2.0)(react@18.2.0)(rollup@2.79.1)(webpack@5.89.0):
+    resolution: {integrity: sha512-0Zy8AFB/BC9jQTUTaVr+2Sch8WHwfA5GGPkKj4vhIl9+2OmO4CN5aAdO9k6/UtLfyi9J0BUNd5uEqv7v2lWSKw==}
     dependencies:
       '@babel/core': 7.23.2
       '@pixi-spine/base': 4.0.3(@pixi/core@7.3.2)(@pixi/display@7.3.2)(@pixi/graphics@7.3.2)(@pixi/mesh-extras@7.3.2)(@pixi/mesh@7.3.2)(@pixi/sprite@7.3.2)
