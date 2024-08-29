@@ -2,13 +2,12 @@
 	import { Meta, Story } from '@storybook/addon-svelte-csf';
 
 	import StoryPixi from './StoryPixi.svelte';
+
 	import {
-		BitMapText,
-		Sprite,
 		SpineProvider,
 		SpineTrack,
-		Text,
-		Container,
+		Sprite,
+		SpineSlot,
 	} from 'pixi-svelte';
 
 	const assets = {
@@ -19,56 +18,50 @@
 					'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/pixi-svelte-package/guitar/transition_char.json',
 				atlas:
 					'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/pixi-svelte-package/guitar/transition_char.atlas',
-			}
+			},
 		},
 		sprites: {
 			type: 'sprites',
 			src: 'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/pixi-svelte-package/sprites/sprites.json',
 		},
-		font: {
-			type: 'font',
-			src: 'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/pixi-svelte-package/font/desyrel.xml',
-		},
 	} as const;
 </script>
 
 <Meta
-	title="pixi-svelte/Container"
-	component={Container}
+	title="pixi-svelte/Spine/SpineProvider"
+	component={SpineProvider}
 	argTypes={{
+		width: { name: 'width', control: { type: 'number' } },
+		height: { name: 'height', control: { type: 'number' } },
 		x: { name: 'x', control: { type: 'number' } },
 		y: { name: 'y', control: { type: 'number' } },
 		zIndex: { name: 'zIndex', control: { type: 'number' } },
-		pivot: { name: 'pivot', control: { type: 'object' } },
+		play: { name: 'play', control: { type: 'boolean' } },
+		timeScale: { name: 'timeScale', control: { type: 'number' } },
+		anchor: { name: 'anchor', control: { type: 'object' } },
 	}}
 	args={{
+		width: 250,
 		x: 300,
-		y: 300,
+		y: 100,
 		zIndex: 1,
-		pivot: { x: 0, y: 0 },
-		rotation: 3.14,
+		play: true,
+		timeScale: 1,
+		anchor: { x: 0, y: 0 },
 	}}
 />
 
 <Story let:args name="Preview">
 	<StoryPixi {assets}>
-		<Container {...args}>
-			<BitMapText
-				value="HELLO WORLD!"
-				style={{
-					fontName: 'Desyrel',
-					fontSize: 50,
-					fill: 0x000000,
-					fontWeight: 'bold',
-					maxWidth: 900,
-					letterSpacing: 0,
-				}}
-			/>
-			<Text value="Hello World" style={{ fill: 0x000000 }} />
-			<Sprite key="logo.png" width={300} height={200} />
-			<SpineProvider width={100} key="guitar">
-				<SpineTrack track="transition_loop" loop />
-			</SpineProvider>
-		</Container>
+		<SpineProvider loop {...args} key="guitar">
+			<SpineTrack track="transition_loop" loop />
+			<SpineSlot slotName="stage_cloud">
+				<Sprite key="logo.png" width={500} height={500} />
+			</SpineSlot>
+			<SpineSlot slotName="stage_light_a_beam_1">
+				<Sprite key="logo.png" width={500} height={500} />
+			</SpineSlot>
+		</SpineProvider>
+		<Sprite x={args.x + args.width} key="logo.png" width={500} height={500} />
 	</StoryPixi>
 </Story>

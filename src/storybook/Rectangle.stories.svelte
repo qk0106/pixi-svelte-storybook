@@ -1,13 +1,17 @@
 <script lang="ts">
+	import { BlurFilter } from 'pixi.js-legacy';
 	import { Meta, Story } from '@storybook/addon-svelte-csf';
 
 	import StoryPixi from './StoryPixi.svelte';
-	
-	import { Rectangle } from 'pixi-svelte';
+
+	import { Rectangle, Text } from 'pixi-svelte';
+
+	const filter = new BlurFilter(0);
+	filter.blur = 10;
 </script>
 
 <Meta
-	title="Pixi-Svelte/Rectangle"
+	title="pixi-svelte/Rectangle"
 	component={Rectangle}
 	argTypes={{
 		width: { name: 'width', control: { type: 'number' } },
@@ -31,7 +35,7 @@
 	args={{
 		width: 100,
 		height: 100,
-		alpha: 1,
+		alpha: 0.9,
 		borderWidth: 2,
 		backgroundColor: 0x522000,
 		borderColor: 0x1dc000,
@@ -43,8 +47,9 @@
 	}}
 />
 
-<Story let:args name="Preview" >
+<Story let:args name="Preview">
 	<StoryPixi>
-		<Rectangle {...args} />
+		<Text {...args} value="hello world" />
+		<Rectangle {...args} filters={[filter]} />
 	</StoryPixi>
 </Story>

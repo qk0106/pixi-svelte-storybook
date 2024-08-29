@@ -2,15 +2,13 @@
 	import { Meta, Story } from '@storybook/addon-svelte-csf';
 
 	import StoryPixi from './StoryPixi.svelte';
-	
-	import fighter from './assets/fighter/fighter.png';
-	import sprites from './assets/sprites';
-
-	import { Sprite, createAsset } from 'pixi-svelte';
+	import {
+		Sprite,
+	} from 'pixi-svelte';
 </script>
 
 <Meta
-	title="Pixi-Svelte/Sprite"
+	title="pixi-svelte/Sprite"
 	component={Sprite}
 	argTypes={{
 		x: { name: 'x', control: { type: 'number' } },
@@ -30,14 +28,18 @@
 	}}
 />
 
-<Story let:args name="Basic" >
-	<StoryPixi assets={{ fighter: createAsset({ img: fighter }) }}>
-		<Sprite {...args} key="fighter" />
+<Story let:args name="From Sprite" >
+	<StoryPixi assets={{
+		sprite: { type: 'sprite', src: 'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/pixi-svelte-package/fighter/fighter.png' },
+	}}>
+		<Sprite {...args} key="sprite" />
 	</StoryPixi>
 </Story>
 
-<Story let:args name="Atlas" >
-	<StoryPixi assets={{ sprites }}>
+<Story let:args name="From Sprites" >
+	<StoryPixi assets={{
+		sprites: { type: 'sprites', src: 'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/pixi-svelte-package/sprites/sprites.json' },
+	}}>
 		<Sprite {...args} key="reels.png" />
 	</StoryPixi>
 </Story>

@@ -1,7 +1,12 @@
 <script lang="ts">
-	import { App, setAppContext, createApp, type Assets } from 'pixi-svelte';
+	import {
+		App,
+		createApp,
+		setAppContext,
+		type Assets
+	} from 'pixi-svelte';
 
-	export let assets: Assets = undefined;
+	export let assets: Assets | undefined = undefined;
 
 	const app = createApp();
 	const { loaded } = app;

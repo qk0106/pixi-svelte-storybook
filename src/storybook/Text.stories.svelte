@@ -2,12 +2,14 @@
 	import { Meta, Story } from '@storybook/addon-svelte-csf';
 
 	import StoryPixi from './StoryPixi.svelte';
-	
-	import { Text } from 'pixi-svelte';
+
+	import {
+		Text,
+	} from 'pixi-svelte';
 </script>
 
 <Meta
-	title="Pixi-Svelte/Text"
+	title="pixi-svelte/Text"
 	component={Text}
 	argTypes={{
 		x: { name: 'x', control: { type: 'number' } },

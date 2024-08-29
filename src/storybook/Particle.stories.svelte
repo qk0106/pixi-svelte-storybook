@@ -1,17 +1,19 @@
 <script lang="ts">
 	import { Meta, Story } from '@storybook/addon-svelte-csf';
 
-	
 	import StoryPixi from './StoryPixi.svelte';
-	import coins from './assets/coins';
-	import fountainCoinsConfig from './assets/fountainCoinsConfig.json';
 
 	import { Particle } from 'pixi-svelte';
 
+	import fountainCoinsConfig from './assets/fountainCoinsConfig.json';
+
+	const assets = {
+		coins: { type: 'spriteSheet', src: 'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/pixi-svelte-package/coins/coins.json' },
+	} as const;
 </script>
 
 <Meta
-	title="Pixi-Svelte/Particle"
+	title="pixi-svelte/Particle"
 	component={Particle}
 	argTypes={{
 		rotation: { name: 'rotation', control: { type: 'number' }},
@@ -48,7 +50,7 @@
 />
 
 <Story let:args name="Preview" >
-	<StoryPixi assets={{ coins }}>
+	<StoryPixi {assets}>
 		<Particle {...args} />
 	</StoryPixi>
 </Story>

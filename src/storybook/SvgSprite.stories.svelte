@@ -2,13 +2,13 @@
 	import { Meta, Story } from '@storybook/addon-svelte-csf';
 
 	import StoryPixi from './StoryPixi.svelte';
-	import svg from './assets/clouds.svg';
-	
+	import svg from './assets/logo.svg';
+
 	import { SvgSprite } from 'pixi-svelte';
 </script>
 
 <Meta
-	title="Pixi-Svelte/SvgSprite"
+	title="pixi-svelte/SvgSprite"
 	component={SvgSprite}
 	argTypes={{
 		x: { name: 'x', control: { type: 'number' } },

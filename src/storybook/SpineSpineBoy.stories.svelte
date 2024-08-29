@@ -1,18 +1,28 @@
 <script lang="ts">
 	import { Meta, Story } from '@storybook/addon-svelte-csf';
-
 	import StoryPixi from './StoryPixi.svelte';
-	
-	import sprites from './assets/sprites';
-	import guitar from './assets/guitar';
-	import font from './assets/font';
 
-	import { Sprite, Spine, SpineSlot } from 'pixi-svelte';
+	import {
+		SpineProvider,
+		SpineTrack,
+	} from 'pixi-svelte';
+
+	const assets = {
+		spineBoy: {
+			type: 'spine',
+			src: {
+				skeleton:
+					'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/pixi-svelte-package/spine-pixi-examples/spineboy-pro.json',
+				atlas:
+					'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/pixi-svelte-package/spine-pixi-examples/spineboy-pma.atlas',
+			},
+		},
+	} as const;
 </script>
 
 <Meta
-	title="Pixi-Svelte/Spine"
-	component={Spine}
+	title="pixi-svelte/Spine/SpineBoy"
+	component={SpineProvider}
 	argTypes={{
 		width: { name: 'width', control: { type: 'number' } },
 		height: { name: 'height', control: { type: 'number' } },
@@ -26,7 +36,7 @@
 	args={{
 		width: 250,
 		x: 300,
-		y: 100,
+		y: 500,
 		zIndex: 1,
 		play: true,
 		timeScale: 1,
@@ -34,21 +44,10 @@
 	}}
 />
 
-<Story let:args name="Preview" >
-	<StoryPixi assets={{ guitar, sprites, font }}>
-		<Spine
-			loop
-			{...args}
-			key="guitar"
-			animationName="transition_loop"
-		>
-			<SpineSlot slotName="stage_cloud">
-				<Sprite key="logo.png" width={500} height={500} />
-			</SpineSlot>
-			<SpineSlot slotName="stage_cloud3">
-				<Sprite key="logo.png" width={500} height={500} />
-			</SpineSlot>
-		</Spine>
-		<Sprite x={args.x + args.width} key="logo.png" width={500} height={500} />
+<Story let:args name="Preview">
+	<StoryPixi {assets}>
+		<SpineProvider key="spineBoy" {...args}>
+			<SpineTrack track="walk" loop />
+		</SpineProvider>
 	</StoryPixi>
 </Story>

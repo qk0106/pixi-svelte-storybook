@@ -1,13 +1,15 @@
 <script lang="ts">
-	import { Text } from 'pixi-svelte';
 	import { Meta, Story } from '@storybook/addon-svelte-csf';
+
 	import StoryPixi from './StoryPixi.svelte';
+
+	import { Text } from 'pixi-svelte';
 </script>
 
-<Meta title="Pixi-Svelte/App" />
+<Meta title="pixi-svelte/App" />
 
 <Story name="Preview" >
 	<StoryPixi>
-		<Text value="Text" style={{ fill: 0x000000 }} />
+		<Text value="App" style={{ fill: 0x000000 }} />
 	</StoryPixi>
 </Story>

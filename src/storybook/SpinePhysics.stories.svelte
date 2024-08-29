@@ -1,20 +1,27 @@
 <script lang="ts">
 	import { Meta, Story } from '@storybook/addon-svelte-csf';
-
 	import StoryPixi from './StoryPixi.svelte';
-
 	import {
-		SpriteSheet,
+		SpineProvider,
+		SpineTrack,
 	} from 'pixi-svelte';
 
 	const assets = {
-		fighter: { type: 'spriteSheet', src: 'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/pixi-svelte-package/fighter/fighter.json' },
+		physics: {
+			type: 'spine',
+			src: {
+				skeleton:
+					'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/pixi-svelte-package/physics-spine/cg_bg.json',
+				atlas:
+					'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/pixi-svelte-package/physics-spine/cg_bg.atlas',
+			}
+		},
 	} as const;
 </script>
 
 <Meta
-	title="pixi-svelte/SpriteSheet (AnimatedSprite)"
-	component={SpriteSheet}
+	title="pixi-svelte/Spine/Physics"
+	component={SpineProvider}
 	argTypes={{
 		width: { name: 'width', control: { type: 'number' } },
 		height: { name: 'height', control: { type: 'number' } },
@@ -22,23 +29,25 @@
 		y: { name: 'y', control: { type: 'number' } },
 		zIndex: { name: 'zIndex', control: { type: 'number' } },
 		play: { name: 'play', control: { type: 'boolean' } },
-		animationSpeed: { name: 'animationSpeed', control: { type: 'number' } },
+		timeScale: { name: 'timeScale', control: { type: 'number' } },
 		anchor: { name: 'anchor', control: { type: 'object' } },
 	}}
 	args={{
-		width: 100,
-		height: 100,
-		x: 50,
-		y: 50,
+		width: 600,
+		x: 300,
+		y: 300,
 		zIndex: 1,
 		play: true,
-		animationSpeed: 1,
+		timeScale: 1,
 		anchor: { x: 0, y: 0 },
 	}}
 />
 
-<Story let:args name="Preview" >
+<Story let:args name="Preview">
 	<StoryPixi {assets}>
-		<SpriteSheet {...args} key="fighter" loop />
+		<SpineProvider key="physics" {...args}>
+			<SpineTrack track="hidebonus" loop />
+			<SpineTrack index={1} track="base_burst_land" loop />
+		</SpineProvider>
 	</StoryPixi>
 </Story>
