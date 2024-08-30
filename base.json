@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Default",
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "composite": false,
+    "declaration": false,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "importsNotUsedAsValues": "error",
+    "ignoreDeprecations": "5.0",
+    "resolveJsonModule": false,
+    "sourceMap": false,
+    "baseUrl": ".",
+    "allowJs": true,
+    "checkJs": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "preserveSymlinks": true,
+    "strict": true
+  },
+  "exclude": ["node_modules"]
+}
