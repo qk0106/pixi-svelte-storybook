@@ -1,4 +1,4 @@
 // @ts-ignore
-import config from 'config-svelte';
+import config from 'config-vite';
 
 export default config();
