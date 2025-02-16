@@ -8,7 +8,7 @@
 
 	import ParticleDemoWithoutSvelte from '../components/ParticleDemoWithoutSvelte.svelte';
 	import ParticleDemoWithSvelte from '../components/ParticleDemoWithSvelte.svelte';
-	import { StoryPixiApp } from 'components-storybook';
+	import StoryPixiApp from '../components/StoryPixiApp.svelte';
 
 	const { Story } = defineMeta({
 		title: "pixi-svelte/Particle",

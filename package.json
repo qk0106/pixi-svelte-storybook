@@ -12,23 +12,17 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
-		"eslint": "^9",
-    "eslint-config-custom": "workspace:*",
-    "components-storybook": "workspace:*",
-    "config-ts": "workspace:*",
-		"config-vite": "workspace:*",
-		"config-svelte": "workspace:*",
-		"config-lingui": "workspace:*",
-		"config-storybook": "workspace:*"
+		"eslint": "^9"
   },
   "dependencies": {
     "svelte": "^5",
     "vite": "latest",
-    "utils-shared": "workspace:*",
-    "pixi-svelte": "workspace:*",
+		"@sveltejs/kit": "latest",
+    "pixi-svelte": "latest",
     "@chromatic-com/storybook": "latest",
     "@storybook/addon-svelte-csf": "next",
     "@storybook/addon-essentials": "latest",
+    "@storybook/addon-docs": "latest",
     "@storybook/builder-vite": "latest",
     "@storybook/svelte": "latest",
     "@storybook/sveltekit": "latest",

@@ -3,7 +3,7 @@
 
 	import { Sprite } from 'pixi-svelte';
 
-	import { StoryPixiApp } from 'components-storybook';
+	import StoryPixiApp from '../components/StoryPixiApp.svelte';
 
 	const { Story } = defineMeta({
 		tags: ['autodocs'],

@@ -2,7 +2,7 @@
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	import { BitmapText } from 'pixi-svelte';
-	import { StoryPixiApp } from 'components-storybook';
+	import StoryPixiApp from '../components/StoryPixiApp.svelte';
 
 	const allText = 'BIT MAP FONTS ARE SUPPORTED!\nWOO YAY!';
 

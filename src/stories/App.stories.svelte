@@ -2,7 +2,7 @@
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	import { App, Text } from 'pixi-svelte';
-	import { StoryPixiApp } from 'components-storybook';
+	import StoryPixiApp from '../components/StoryPixiApp.svelte';
 
 	const { Story } = defineMeta({
 		title: "pixi-svelte/App",

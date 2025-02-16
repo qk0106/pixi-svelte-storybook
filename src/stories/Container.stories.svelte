@@ -3,7 +3,7 @@
 
 	import { Container } from 'pixi-svelte';
 
-	import { StoryPixiApp } from 'components-storybook';
+	import StoryPixiApp from '../components/StoryPixiApp.svelte';
 
 	import {
 		BitmapText,

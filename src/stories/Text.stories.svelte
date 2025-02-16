@@ -2,9 +2,9 @@
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	import { Text, Rectangle } from 'pixi-svelte';
-	import { waitForTimeout } from 'utils-shared/wait';
+	import { waitForTimeout } from '../utils';
 
-	import { StoryPixiApp } from 'components-storybook';
+	import StoryPixiApp from '../components/StoryPixiApp.svelte';
 
 	const { Story } = defineMeta({
 		tags: ['autodocs'],

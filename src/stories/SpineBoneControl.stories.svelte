@@ -4,7 +4,7 @@
 	import { SpineProvider } from 'pixi-svelte';
 
 	import MousePositionProvider from '../components/MousePositionProvider.svelte';
-	import { StoryPixiApp } from 'components-storybook';
+	import StoryPixiApp from '../components/StoryPixiApp.svelte';
 
 	import {
 		SpineTrack,

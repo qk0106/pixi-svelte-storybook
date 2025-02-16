@@ -6,9 +6,9 @@
 		SpineProvider,
 		SpineTrack,
 	} from 'pixi-svelte';
-	import { waitForTimeout } from 'utils-shared/wait';
+	import { waitForTimeout } from '../utils';
 
-	import { StoryPixiApp } from 'components-storybook';
+	import StoryPixiApp from '../components/StoryPixiApp.svelte';
 
 	const { Story } = defineMeta({
 		title: "pixi-svelte/Spine/SpineTracks",

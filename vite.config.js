@@ -1,4 +1,26 @@
-// @ts-ignore
-import config from 'config-vite';
+// Don't convert this to a ts file, because of this https://github.com/vitejs/vite/issues/5370
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
 
-export default config();
+const NODE_ENV = process.env.NODE_ENV;
+let dev = NODE_ENV === 'development';
+
+export default defineConfig({
+	plugins: [sveltekit()],
+	logLevel: 'info',
+	build: {
+		assetsInlineLimit: Infinity,
+		sourcemap: dev ? true : false,
+		output: {
+			sourcemap: dev ? true : false,
+		},
+	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				api: 'modern-compiler',
+			},
+		},
+	},
+});
+	

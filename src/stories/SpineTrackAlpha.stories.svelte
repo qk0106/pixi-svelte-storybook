@@ -3,7 +3,7 @@
 	import { Tween } from 'svelte/motion';
 	import { backInOut } from 'svelte/easing';
 
-	import { StoryPixiApp } from 'components-storybook';
+	import StoryPixiApp from '../components/StoryPixiApp.svelte';
 
 	import { SpineProvider, SpineTrack, Text } from 'pixi-svelte';
 
