@@ -8,6 +8,7 @@
     "storybook"
   ],
   "scripts": {
+    "dev": "vite dev",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
