@@ -11,12 +11,15 @@ importers:
       '@chromatic-com/storybook':
         specifier: latest
         version: 3.2.4(react@19.0.0)(storybook@8.5.6)
+      '@esotericsoftware/spine-pixi-v8':
+        specifier: ^4
+        version: 4.2.73(pixi.js@8.8.0)
       '@storybook/addon-docs':
         specifier: latest
-        version: 8.5.6(@types/react@19.0.8)(storybook@8.5.6)
+        version: 8.5.6(@types/react@19.0.9)(storybook@8.5.6)
       '@storybook/addon-essentials':
         specifier: latest
-        version: 8.5.6(@types/react@19.0.8)(storybook@8.5.6)
+        version: 8.5.6(@types/react@19.0.9)(storybook@8.5.6)
       '@storybook/addon-svelte-csf':
         specifier: next
         version: 5.0.0-next.23(@storybook/svelte@8.5.6(storybook@8.5.6)(svelte@5.20.1))(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.20.1)(vite@6.1.0))(storybook@8.5.6)(svelte@5.20.1)(vite@6.1.0)
@@ -647,8 +650,8 @@ packages:
   '@types/pug@2.0.10':
     resolution: {integrity: sha512-Sk/uYFOBAB7mb74XcpizmH0KOR2Pv3D2Hmrh1Dmy5BmK3MpdSa5kqZcg6EKBdklU0bFXX9gCfzvpnyUehrPIuA==}
 
-  '@types/react@19.0.8':
-    resolution: {integrity: sha512-9P/o1IGdfmQxrujGbIMDyYaaCykhLKc0NGCtYcECNUr9UAaDe4gwvV9bR6tvd5Br1SG0j+PBpbKr2UYY8CwqSw==}
+  '@types/react@19.0.9':
+    resolution: {integrity: sha512-FedNTYgmMwSZmD1Sru/W1gJKuiYCN/3SuBkmZkcxX+FpO5zL76B22A9YNfAKg4HQO3Neh/30AiynP6BELdU0qQ==}
 
   '@types/uuid@9.0.8':
     resolution: {integrity: sha512-jg+97EGIcY9AGHJJRaaPVgetKDsrTgbRjQ5Msgjh/DQKEFl0DtyRr/VCOyD1T2R1MNeWPK/u7JoGhlDZnKBAfA==}
@@ -972,8 +975,8 @@ packages:
   esrap@1.2.2:
     resolution: {integrity: sha512-F2pSJklxx1BlQIQgooczXCPHmcWpn6EsP5oo73LQfonG9fIlIENQ8vMmfGXeojP9MrkzUNAfyU5vdFlR9shHAw==}
 
-  esrap@1.4.4:
-    resolution: {integrity: sha512-tDN6xP/r/b3WmdpWm7LybrD252hY52IokcycPnO+WHfhFF0+n5AWtcLLK7VNV6m0uYgVRhGVs8OkZwRyfC7HzQ==}
+  esrap@1.4.5:
+    resolution: {integrity: sha512-CjNMjkBWWZeHn+VX+gS8YvFwJ5+NDhg8aWZBSFJPR8qQduDNjbJodA2WcwCm7uQa5Rjqj+nZvVmceg1RbHFB9g==}
 
   esrecurse@4.3.0:
     resolution: {integrity: sha512-KmfKL3b6G+RXvP8N1vr3Tq1kL/oCFgn2NYXEtqP8/L3pKapUA4G8cFVaoF3SU323CD4XypR/ffioHmkti6/Tag==}
@@ -1879,10 +1882,10 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@mdx-js/react@3.1.0(@types/react@19.0.8)(react@19.0.0)':
+  '@mdx-js/react@3.1.0(@types/react@19.0.9)(react@19.0.0)':
     dependencies:
       '@types/mdx': 2.0.13
-      '@types/react': 19.0.8
+      '@types/react': 19.0.9
       react: 19.0.0
 
   '@pixi/colord@2.9.6': {}
@@ -1969,9 +1972,9 @@ snapshots:
       storybook: 8.5.6
       ts-dedent: 2.2.0
 
-  '@storybook/addon-docs@8.5.6(@types/react@19.0.8)(storybook@8.5.6)':
+  '@storybook/addon-docs@8.5.6(@types/react@19.0.9)(storybook@8.5.6)':
     dependencies:
-      '@mdx-js/react': 3.1.0(@types/react@19.0.8)(react@19.0.0)
+      '@mdx-js/react': 3.1.0(@types/react@19.0.9)(react@19.0.0)
       '@storybook/blocks': 8.5.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.6)
       '@storybook/csf-plugin': 8.5.6(storybook@8.5.6)
       '@storybook/react-dom-shim': 8.5.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.6)
@@ -1982,12 +1985,12 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@storybook/addon-essentials@8.5.6(@types/react@19.0.8)(storybook@8.5.6)':
+  '@storybook/addon-essentials@8.5.6(@types/react@19.0.9)(storybook@8.5.6)':
     dependencies:
       '@storybook/addon-actions': 8.5.6(storybook@8.5.6)
       '@storybook/addon-backgrounds': 8.5.6(storybook@8.5.6)
       '@storybook/addon-controls': 8.5.6(storybook@8.5.6)
-      '@storybook/addon-docs': 8.5.6(@types/react@19.0.8)(storybook@8.5.6)
+      '@storybook/addon-docs': 8.5.6(@types/react@19.0.9)(storybook@8.5.6)
       '@storybook/addon-highlight': 8.5.6(storybook@8.5.6)
       '@storybook/addon-measure': 8.5.6(storybook@8.5.6)
       '@storybook/addon-outline': 8.5.6(storybook@8.5.6)
@@ -2024,7 +2027,7 @@ snapshots:
       '@sveltejs/vite-plugin-svelte': 5.0.3(svelte@5.20.1)(vite@6.1.0)
       dedent: 1.5.3
       es-toolkit: 1.32.0
-      esrap: 1.4.4
+      esrap: 1.4.5
       magic-string: 0.30.17
       svelte: 5.20.1
       svelte-ast-print: 0.4.2(svelte@5.20.1)
@@ -2252,7 +2255,7 @@ snapshots:
 
   '@types/pug@2.0.10': {}
 
-  '@types/react@19.0.8':
+  '@types/react@19.0.9':
     dependencies:
       csstype: 3.1.3
 
@@ -2616,7 +2619,7 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.0
       '@types/estree': 1.0.6
 
-  esrap@1.4.4:
+  esrap@1.4.5:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
@@ -3168,7 +3171,7 @@ snapshots:
       axobject-query: 4.1.0
       clsx: 2.1.1
       esm-env: 1.2.2
-      esrap: 1.4.4
+      esrap: 1.4.5
       is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.17

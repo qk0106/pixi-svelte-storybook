@@ -29,7 +29,8 @@
     "@sveltejs/adapter-auto": "latest",
     "storybook": "latest",
     "@sveltejs/vite-plugin-svelte": "^5",
-    "pixi.js": "^8"
+    "pixi.js": "^8",
+		"@esotericsoftware/spine-pixi-v8": "^4"
   },
   "type": "module"
 }
