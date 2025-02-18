@@ -18,14 +18,18 @@
     },
   });
   setAppContext(app);
+
+  let spinning = $state(false);
 </script>
 
-<!-- svelte-ignore a11y_consider_explicit_label -->
 <button
-  onclick={() => {
-    stateSlotsDerived.spin();
-  }}
->click to spin</button>
+  disabled={spinning}
+  onclick={async () => {
+    spinning = true;
+    await stateSlotsDerived.spin();
+    spinning = false;
+  }}>click to spin</button
+>
 
 <App>
   {#if app.stateApp.loaded}
